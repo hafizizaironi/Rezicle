@@ -1,49 +1,81 @@
+<!doctype html>
 <html>
-<head>
-    <title>HOMEPAGE</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+	<head>
+		<title>Parallex Scroll</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
 <body>
-    
-    
-    
-    <div class="banner">
-        <div class="navbar">
-            <img src="logo.jpg" class="logo">
-            <ul>
-                
-                <li><a href="index.htm">HOME</a></li>
-                <li><a href="REDUCE.html">REDUCE</a></li>
-                <li><a href="REUSE.html">REUSE</a></li>
-                <li><a href="RECYCLE.html">RECYCLE</a></li>
-                
-            
-            
-            
-            </ul>
-        
-        
-        </div>
-        <div class="content">
-            <h1>WELCOME TO 3R INVENTION</h1>
-            <p>OUR WEBSITE GIVE YOUR OPPORTUNITY TO DONATE OR TAKE 3R RECYCLE <br>LOGIN AS</p>
-            
+	<header id="header">
+	<a href="#" class="logo">C S I T</a>
+	<ul>
+		<li><a href="index.html" class="active">HOME</a></li>
+		<li><a href="REDUCE.html">REDUCE</a></li>
+		<li><a href="REUSE.html">REUSE</a></li>
+		<li><a href="RECYCLE.html">RECYCLE</a></li>
+		
+		</ul>
+	
+	</header>
+	<section>
+		<h2 id="text"><span>Welcome to 3R Invention</span><br>Journey</h2>
+		<img src="bird1.png" id="bird1">
+		<img src="bird2.png" id="bird2">
+		<img src="forest.png" id="forest">
+		<div class="main-text">
+		<a href="#" id="btn">Explore</a>
+		</div>
+		
+		<img src="rocks.png" id="rocks">
+		<img src="water.png" id="water">
+		
+	
+	</section>
+	<div class="sec">
+		<h2>Hensem ke shekh?</h2>
+		<p>maka shekh sangat hensem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry
+			maka shekh sangat hensem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			maka shekh sangat hensem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry..</p>
+	
+	
+	<div class="content">
+
             <div>
-                <a href="loginD.html">
-                <button type="button">DONATOR</button>
+                <a href="register.html">
+                <button type="button">REGISTER</button>
                 </a>
-                <a href="loginT.html">
-                <button type="button">TAKER</button>
+                <a href="login.php">
+                <button type="button">LOGIN</button>
                 </a>
             </div>
         
         </div>
-        
-    
-            
-    </div>
-    
-    
-    
-</body>
+	</div>
+	
+	<script>
+		let text = document.getElementById('text');
+		let bird1 = document.getElementById('bird1');
+		let bird2 = document.getElementById('bird2');
+		let btn = document.getElementById('btn');
+		let rocks = document.getElementById('rocks');
+		let forest = document.getElementById('forest');
+		let water = document.getElementById('water');
+		let header = document.getElementById('header');
+	
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY;
+			
+			text.style.top = 50 + value * -0.5 + '%';
+			bird1.style.top = value * -1.5 + 'px';
+			bird1.style.left = value * 2 + 'px';
+			bird2.style.top = value * -1.5 + 'px';
+			bird2.style.left = value * -5 + 'px';
+			btn.style.marginTop = value * 1.5 + 'px';
+			rocks.style.top = value * -0.12 + 'px';
+			forest.style.top = value * 0.25 + 'px';
+			header.style.top = value * 0.5 + 'px';
+		})
+	</script>
+	
+	</body>
+
 </html>
