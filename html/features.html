@@ -26,12 +26,12 @@
     <body>
     <nav class="navigation">
         
-        <a href="#" class="logo">logo</a>
+        <a href="#" class="logo">C S I T</a>
         
         <!--menu---------->
         <ul class="menu">
             <li><a href="features.html" class="active">Home</a></li>
-            <li><a href="#" >Products</a></li>
+            <li><a href="" >Products</a></li>
             <li><a href="cart.html" >Cart</a></li>
             <li><a href="contacts.html" >Contacts</a></li>
         
@@ -84,6 +84,44 @@
                 
             </div>
             
+            <!-----------======charts======------------>
+            
+            
+            <section id="chart">
+            <!--heading--->
+            <h2>CHART</h2>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['NAMA', 'PLASTIC', 'ALUMUNIUM', 'COOKING OIL', 'PAPERS',         'AVERAGE'],
+          ['HAFIZ',  165,      938,         522,             998,               614.6],
+          ['SHEKH',  135,      1120,        599,             1268,                682],
+          ['FAKHRUL',  157,      1167,        587,             807,               623],
+          ['HAKIMI',  139,      1110,        615,             968,              609.4],
+          ['DINIE',  136,      691,         629,             1026,              569.6]
+        ]);
+
+        var options = {
+          title : 'Monthly 3R affected by TAPAH',
+            backgroundColor: '#c2c2d6',
+          vAxis: {title: 'Money Earn'},
+          hAxis: {title: 'Month'},
+          seriesType: 'bars',
+          series: {4: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+            <div id="chart_div" class="chart" style="align-items: center"></div>
+            
+            </section>
          
         </section>
         
@@ -94,7 +132,7 @@
         
         <!-------======category====---------->
         
-        <section id="categories">
+        <section id="categories" >
             <!--heading--->
             <h2>Categories</h2>
             
